@@ -10,14 +10,14 @@ BACKEND_PID=$!
 # Esperar un momento para que el backend inicie
 sleep 2
 
-# Servir frontend en puerto 7771
-echo "🌐 Sirviendo frontend en puerto 7771..."
-npx serve -s dist -l 7771 &
+# Servir frontend en puerto 7772
+echo "🌐 Sirviendo frontend en puerto 7772..."
+npx serve -s dist -l 7772 &
 FRONTEND_PID=$!
 
 echo "✅ RDK Server Monitor iniciado correctamente"
 echo "   - Backend API: http://localhost:3001"
-echo "   - Frontend: http://localhost:7771"
+echo "   - Frontend: http://localhost:7772"
 echo "   - Usuario admin: rdk"
 echo "   - Contraseña: *Ra8097164412"
 
