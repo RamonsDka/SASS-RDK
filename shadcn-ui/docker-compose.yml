@@ -6,7 +6,7 @@ services:
     container_name: rdk-server-monitor
     restart: unless-stopped
     ports:
-      - "7771:7771"
+      - "7772:7772"
       - "3001:3001"
     volumes:
       # Volumen persistente para la base de datos
