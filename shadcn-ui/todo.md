@@ -21,7 +21,7 @@
 
 ### 4. Docker
 - **Dockerfile** - Imagen Docker multi-stage para frontend y backend
-- **docker-compose.yml** - Configuración completa con puerto 7771
+- **docker-compose.yml** - Configuración completa con puerto 7772
 
 ## Características Implementadas
 - ✅ Monitoreo en tiempo real de recursos del sistema
@@ -29,7 +29,7 @@
 - ✅ Usuario admin predefinido (rdk / *Ra8097164412)
 - ✅ Gestión de usuarios con aprobación
 - ✅ Diseño moderno inspirado en la imagen
-- ✅ Puerto 7771
+- ✅ Puerto 7772
 - ✅ Docker Compose para instalación automática
 
 ## Notas de Implementación
