@@ -41,7 +41,7 @@ RUN chmod +x start.sh
 RUN mkdir -p /app/server/data
 
 # Exponer puertos
-EXPOSE 7771 3001
+EXPOSE 7772 3001
 
 # Variables de entorno
 ENV NODE_ENV=production
