@@ -7,8 +7,8 @@ Monitor de recursos del sistema en tiempo real para servidores Ubuntu con CasaOS
 - Ubuntu Server con CasaOS instalado
 - Docker y Docker Compose instalados
 - Portainer instalado (opcional, para gestión visual)
-- Puerto 7771 disponible
-- Dominio configurado en Cloudflare: `sas.rdktech.us`
+- Puerto 7772 disponible
+- Dominio configurado en Cloudflare: `sass.rdktech.us`
 
 ## 🔧 Instalación Rápida
 
@@ -58,7 +58,7 @@ docker-compose logs rdk-server-monitor
 2. **Ir a DNS → Add Record**
 3. **Configurar el registro:**
    - Type: `A` o `CNAME`
-   - Name: `sas`
+   - Name: `sass`
    - Content: IP de tu servidor o dominio principal
    - Proxy status: Activado (nube naranja)
    - TTL: Auto
@@ -74,7 +74,7 @@ docker-compose logs rdk-server-monitor
 - **Contraseña:** `*Ra8097164412`
 
 ### Primer Acceso:
-1. Abrir navegador en: `http://sas.rdktech.us` o `http://localhost:7771`
+1. Abrir navegador en: `http://sass.rdktech.us` o `http://localhost:7772`
 2. Iniciar sesión con las credenciales de administrador
 3. El dashboard mostrará las métricas del sistema en tiempo real
 
@@ -202,7 +202,7 @@ docker-compose restart
 docker-compose logs rdk-server-monitor
 
 # Verificar puertos en uso
-sudo netstat -tulpn | grep 7771
+sudo netstat -tulpn | grep 7772
 sudo netstat -tulpn | grep 3001
 ```
 
@@ -235,7 +235,7 @@ docker-compose up -d
 
 Si encuentras algún problema:
 1. Revisar los logs: `docker-compose logs -f`
-2. Verificar que los puertos 7771 y 3001 están disponibles
+2. Verificar que los puertos 7772 y 3001 están disponibles
 3. Asegurarse de que Docker tiene permisos para acceder al sistema host
 
 ## 📝 Notas Adicionales
@@ -249,8 +249,8 @@ Si encuentras algún problema:
 
 Tu monitor de recursos del sistema está configurado y listo para usar. Accede a través de:
 
-- **Local:** http://localhost:7771
-- **Dominio:** http://sas.rdktech.us
+- **Local:** http://localhost:7772
+- **Dominio:** http://sass.rdktech.us
 
 **Usuario:** rdk  
 **Contraseña:** *Ra8097164412
