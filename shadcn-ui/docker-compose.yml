@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  rdk-server-monitor:
+    build: .
+    container_name: rdk-server-monitor
+    restart: unless-stopped
+    ports:
+      - "7771:7771"
+      - "3001:3001"
+    volumes:
+      # Volumen persistente para la base de datos
+      - ./data:/app/server/data
+      # Acceso al sistema host para métricas (solo lectura)
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc:/host/etc:ro
+    environment:
+      - NODE_ENV=production
+      - DB_PATH=/app/server/data/users.db
+      - JWT_SECRET=rdk-server-monitor-secret-key-2024
+      - VITE_API_URL=http://localhost:3001/api
+    # Privilegios necesarios para leer métricas del sistema
+    privileged: true
+    pid: host
+    network_mode: host
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.rdk-monitor.rule=Host(`sas.rdktech.us`)"
+      - "traefik.http.services.rdk-monitor.loadbalancer.server.port=7771"
+
+volumes:
+  db-data:
+    driver: local
